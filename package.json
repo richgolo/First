@@ -1,0 +1,7 @@
+{
+  "name": "first",
+  "private": true,
+  "scripts": {
+    "start": "yarn --cwd backend start"
+  }
+}

@@ -1,0 +1,14 @@
+const UserModel = require("../model/user")
+
+const register = async (req,res)=>{
+try {
+    const user = await UserModel.create(req.body)
+    res.status(201).json({id: user._id, username: user.username, email: user.email});
+} catch (error) {
+  res.status(400).json({message: error.message});
+}
+
+}
+
+
+module.exports = {register}
